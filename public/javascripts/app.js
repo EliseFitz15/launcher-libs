@@ -5,11 +5,12 @@ $(document).ready(function() {
     dataType: "json",
     success: function(data) {
       alert("We win");
-      debugger;
-      stories
-      // stories.forEach(function(story) {
-      //   $("<p>" + story.content + "</p>").show;
-      // });
+      var stories = data.stories;
+      // $(stories).show;
+      // debugger;
+      stories.forEach(function(story) {
+      $(".prince").append("<p>" + story.content + "</p>").show;
+      });
   },
     error: function() {
       alert("in the error block");
@@ -20,6 +21,7 @@ $(document).ready(function() {
 
 $("#new-story-button").click(function(e) {
   e.preventDefault();
+      debugger;
 
   $.ajax({
     type: "POST",
@@ -27,7 +29,6 @@ $("#new-story-button").click(function(e) {
     data: {name: name, content: content, noun: noun, verb: verb, time: time, occupation: occupation, hometown: hometown, place: place, hobby: hobby, animal: animal, boardgame: boardgame, adjective: adjective, verb_two: verb_two, adjective_two: adjective_two, noun_two: noun_two, verb_three: verb_three},
     dataType: "json",
     success: function(story) {
-
 
 
     },

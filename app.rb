@@ -31,8 +31,7 @@ get "/.json" do
   stories = Story.all
 
   json({
-    # stories: stories
-    "Hello" => "World"
+    stories: stories
     })
 
 end
