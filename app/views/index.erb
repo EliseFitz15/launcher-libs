@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Mad-libs</title>
-      <link rel="stylesheet" href="/index.css">
-      <link rel="stylesheet" href="/normalize.css">
-      <link rel="stylesheet" href="/foundation.min.css">
+      <link rel="stylesheets" href="/app.css">
+      <link rel="stylesheets" href="/normalize.css">
+      <link rel="stylesheets" href="/foundation.min.css">
   </head>
 
   <body>
@@ -14,8 +14,33 @@
 
     <p class="stories"></p>
 
-    <script src="jquery-2.1.4.min.js"></script>
-    <script src="app.js"></script>
+    <form id='launchers-theme-song-form' action="/" method="POST">
+      Verbs: <input id="verb-text-field" name="text"><input id="verb2-text-field" name="text"><input id="verb3-text-field" name="text">
+      <br>
+      Nouns: <input id="noun-text-field" name="text"><input id="noun2-text-field" name="text">
+      <br>
+      Adjectives: <input id="adjective-text-field" name="text"><input id="adjective2-text-field" name="text">
+      <br>
+      Occupation: <input id="occupation-text-field" name="text">
+      <br>
+      Place: <input id="place-text-field" name="text">
+      <br>
+      Hobby: <input id="hobby-text-field" name="text">
+      <br>
+      Hometown: <input id="hometown-text-field" name="text">
+      <br>
+      Board Game: <input id="boardgame-text-field" name="text">
+      <br>
+      Animal(plural): <input id="animal-text-field" name="text">
+      <br>
+      Unit of time: <input id="time-text-field" name="text">
+      <br>
+      <br>
+  <button id="new-story-button">Submit</button>
+</form>
+
+    
+
 
   </body>
 </html>

@@ -2,7 +2,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: launcher-libs_development
+  database: launcher_libs_development
   pool: 5
   username:
   password:
@@ -11,7 +11,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: launcher-libs_test
+  database: launcher_libs_test
   pool: 5
   username:
   password:
@@ -20,7 +20,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: launcher-libs_production
+  database: launcher_libs_production
   pool: 5
   username:
   password:
