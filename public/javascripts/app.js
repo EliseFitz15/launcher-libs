@@ -21,12 +21,16 @@ $(document).ready(function() {
 
 $("#new-story-button").click(function(e) {
   e.preventDefault();
+  var noun = $('#noun-text-field').val();
+  var verb = $('#verb-text-field').val();
+  var time = $('#time-text-field').val();
+
       debugger;
 
   $.ajax({
     type: "POST",
     url: "/",
-    // data: { noun: noun, verb: verb, time: time },
+    data: { noun: noun, verb: verb, time: time },
     dataType: "json",
     success: function(story) {
 
