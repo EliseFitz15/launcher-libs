@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $.ajax({
     type: "GET",
-    url: "/.json",
+    url: "/stories.json",
     dataType: "json",
     success: function(data) {
       alert("We win");
@@ -26,7 +26,7 @@ $("#new-story-button").click(function(e) {
   $.ajax({
     type: "POST",
     url: "/",
-    data: {name: name, content: content, noun: noun, verb: verb, time: time, occupation: occupation, hometown: hometown, place: place, hobby: hobby, animal: animal, boardgame: boardgame, adjective: adjective, verb_two: verb_two, adjective_two: adjective_two, noun_two: noun_two, verb_three: verb_three},
+    // data: { noun: noun, verb: verb, time: time },
     dataType: "json",
     success: function(story) {
 
