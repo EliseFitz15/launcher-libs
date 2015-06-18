@@ -17,7 +17,7 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get "/" do
-
+  @stories = Story.all
   erb :index
 end
 
@@ -27,6 +27,7 @@ get "/stories.json" do
   json({
     stories: stories
     })
+
 end
 
 post '/' do
@@ -35,6 +36,11 @@ post '/' do
   time = params[:time]
 
   content = "Now this is a story all about how my #{noun} got flipped #{verb} upside down. And I\'d like to take a #{time} just sit right down"
-  launcher_theme_song = Story.create(name: "Launchers Theme Song", content: content).to_json
+  launcher_theme_song = Catalog.create(name: "Launchers Theme Song", content: content).to_json
 
+end
+
+get '/catalog' do
+
+  erb :catalog
 end

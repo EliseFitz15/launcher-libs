@@ -2,3 +2,7 @@ h1, h3, p {
   padding: 10px;
   text-align: center;
 }
+
+#launchers-theme-song-form {
+  display: none
+}

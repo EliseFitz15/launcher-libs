@@ -1,16 +1,26 @@
+      // $("#launchers-theme-song-form").hide();
 $(document).ready(function() {
+      $("li").click(function() {
+        var formStory = $(this).children("#launchers-theme-song-form");
+        if (formStory.is(":visible")) {
+          formStory.hide();
+        } else {
+          $("#launchers-theme-song-form").hide();
+          formStory.show();
+        }
+      });
+
   $.ajax({
     type: "GET",
     url: "/stories.json",
     dataType: "json",
     success: function(data) {
       alert("We win");
-      var stories = data.stories;
-      // $(stories).show;
-      // debugger;
-      stories.forEach(function(story) {
-      $(".prince").append("<p>" + story.content + "</p>").show;
-      });
+      // var stories = data.stories;
+      // // debugger;
+      // stories.forEach(function(story) {
+      // $(".stories").append("<p>" + story.content + "</p>").show;
+      // });
   },
     error: function() {
       alert("in the error block");

@@ -12,7 +12,13 @@
     <h1>Launcher-Libs</h1>
     <h3>Choose your story.</h3>
 
-    <p class="prince"></p>
+    <ul>
+      <% @stories.each do |story| %>
+        <li><a><%= story.name %></a></li>
+      <% end %>
+    </ul>
+
+    <p class="stories"></p>
 
     <form id='launchers-theme-song-form' action="/" method="POST">
       Verbs: <input id="verb-text-field" name="text"><input id="verb2-text-field" name="text"><input id="verb3-text-field" name="text">
