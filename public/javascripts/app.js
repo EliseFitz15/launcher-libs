@@ -1,7 +1,7 @@
       // $("#launchers-theme-song-form").hide();
 $(document).ready(function() {
-      $("li").click(function() {
-        var formStory = $(this).children("#launchers-theme-song-form");
+      $("a").click(function() {
+        var formStory = $("li").children("#launchers-theme-song-form");
         if (formStory.is(":visible")) {
           formStory.hide();
         } else {

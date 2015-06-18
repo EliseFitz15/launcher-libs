@@ -18,11 +18,14 @@ end
 
 get "/" do
   @stories = Story.all
+  # @stories = @stories_escaped.content.gsub("\\", "")
+
   erb :index
 end
 
 get "/stories.json" do
   stories = Story.all
+
 
   json({
     stories: stories

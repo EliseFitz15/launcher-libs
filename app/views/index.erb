@@ -14,36 +14,40 @@
 
     <ul>
       <% @stories.each do |story| %>
-        <li><a><%= story.name %></a></li>
+
+        <li>
+          <a><%= story.name %></a>
+          <%= story.content %>
+              <form id='launchers-theme-song-form' action="/" method="POST">
+                Verbs: <input id="verb-text-field" name="text"><input id="verb2-text-field" name="text"><input id="verb3-text-field" name="text">
+                <br>
+                Nouns: <input id="noun-text-field" name="text"><input id="noun2-text-field" name="text">
+                <br>
+                Adjectives: <input id="adjective-text-field" name="text"><input id="adjective2-text-field" name="text">
+                <br>
+                Occupation: <input id="occupation-text-field" name="text">
+                <br>
+                Place: <input id="place-text-field" name="text">
+                <br>
+                Hobby: <input id="hobby-text-field" name="text">
+                <br>
+                Hometown: <input id="hometown-text-field" name="text">
+                <br>
+                Board Game: <input id="boardgame-text-field" name="text">
+                <br>
+                Animal(plural): <input id="animal-text-field" name="text">
+                <br>
+                Unit of time: <input id="time-text-field" name="text">
+                <br>
+                <br>
+            <button id="new-story-button">Submit</button>
+          </form>
+        </li>
       <% end %>
     </ul>
 
     <p class="stories"></p>
 
-    <form id='launchers-theme-song-form' action="/" method="POST">
-      Verbs: <input id="verb-text-field" name="text"><input id="verb2-text-field" name="text"><input id="verb3-text-field" name="text">
-      <br>
-      Nouns: <input id="noun-text-field" name="text"><input id="noun2-text-field" name="text">
-      <br>
-      Adjectives: <input id="adjective-text-field" name="text"><input id="adjective2-text-field" name="text">
-      <br>
-      Occupation: <input id="occupation-text-field" name="text">
-      <br>
-      Place: <input id="place-text-field" name="text">
-      <br>
-      Hobby: <input id="hobby-text-field" name="text">
-      <br>
-      Hometown: <input id="hometown-text-field" name="text">
-      <br>
-      Board Game: <input id="boardgame-text-field" name="text">
-      <br>
-      Animal(plural): <input id="animal-text-field" name="text">
-      <br>
-      Unit of time: <input id="time-text-field" name="text">
-      <br>
-      <br>
-  <button id="new-story-button">Submit</button>
-</form>
 
 
 
