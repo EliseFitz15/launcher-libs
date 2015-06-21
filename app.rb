@@ -20,6 +20,19 @@ get "/" do
   @stories = Story.all
   # @stories = @stories_escaped.content.gsub("\\", "")
 
+  # example = Story.create(name: "example", content: "This is a NOUN and a VERB.")
+  # hash = {"NOUN" => "#{noun}", "VERB" => "#{verb}"}
+  #
+  # string = example.content
+  #
+  # noun = "runner"
+  # verb = "run"
+  #
+  # hash.each do |key, value|
+  #   string.gsub!(key, value)
+  # end
+  #
+  # string
   erb :index
 end
 
@@ -32,6 +45,7 @@ get "/stories.json" do
     })
 
 end
+
 
 post '/' do
   noun = params[:noun]

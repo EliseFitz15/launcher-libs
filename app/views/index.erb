@@ -8,14 +8,14 @@
       <link rel="stylesheets" href="/foundation.min.css">
   </head>
 
-  <body>
+  <body class="libs">
     <h1>Launcher-Libs</h1>
     <h3>Choose your story.</h3>
 
     <ul>
       <% @stories.each do |story| %>
 
-        <li>
+        <li class="stories">
           <a><%= story.name %></a>
           <%= story.content %>
               <form id='launchers-theme-song-form' action="/" method="POST">
@@ -46,7 +46,6 @@
       <% end %>
     </ul>
 
-    <p class="stories"></p>
 
 
 

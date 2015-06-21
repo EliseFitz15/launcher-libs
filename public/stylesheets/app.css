@@ -1,8 +1,25 @@
+.libs {
+  background-color: #cadee6;
+}
+
 h1, h3, p {
   padding: 10px;
   text-align: center;
 }
 
 #launchers-theme-song-form {
-  display: none
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.stories {
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ed197b;
+  padding: 10px;
+  margin: 25px;
 }
